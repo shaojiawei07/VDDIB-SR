@@ -4,7 +4,7 @@ This repositort contains the codes to reproduce the main experimental results in
 
 
 
-## logs
+## Logs
 
 **[Aug-16-2022]** I have released the code for the MNIST dataset. The content continues updating.
 
