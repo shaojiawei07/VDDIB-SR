@@ -1,12 +1,12 @@
 # VDDIB-SR
 
-This repositort contains the codes to reproduce the main experimental results in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication.
+This repositort contains the codes to reproduce the main experimental results in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication. The content continues updating.
 
 
 
 ## Logs
 
-**[Aug-16-2022]** I have released the code for the MNIST dataset. The content continues updating.
+**[Aug-16-2022]** I have released the code for the MNIST dataset. 
 
 **[Jul-23-2022]** Our paper has been accepted, and I plan to release the codes before Aug-16-2022.
 
