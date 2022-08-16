@@ -404,7 +404,7 @@ def main():
 
     # inference
     model.load_state_dict(best_model)
-    threshold_list = [0.8,0.825,0.85,0.875,0.9,0.925,0.95,0.975]
+    threshold_list = [0.5,0.6,0.7,0.8,0.9,0.925,0.95,0.96,0.97,0.98,0.985,0.99,0.995,1]
 
     print("\nInference: \n")
     for i in range(len(threshold_list)):
