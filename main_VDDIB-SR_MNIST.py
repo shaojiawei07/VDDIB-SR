@@ -233,22 +233,6 @@ class Net(nn.Module):
         for params in self.view2_ib_sigma.parameters():
             params.requires_grad =  requires_grad      
 
-
-def train_VDDIB_SR(args, model, device, train_loader, optimizer, epoch):
-
-    model.IB_extractor_requires_grad(requires_grad = False)
-    model.train()
-
-    for batch_idx, (data, target) in enumerate(train_loader):
-        data, target = data.to(device), target.to(device)
-        optimizer.zero_grad()
-        T2_output, T1_output, view1_output, view2_output, _ = model(data, args)
-        loss = F.nll_loss(T2_output, target) + F.nll_loss(T1_output, target) \
-        + args.beta * (((F.nll_loss(view1_output, target) + F.nll_loss(view2_output, target)))) #+ args.ga * KL_loss
-        loss.backward()
-        optimizer.step()
-    return loss
-
 def train_VIB(args, model, device, train_loader, optimizer, epoch):
 
     model.train()
@@ -263,6 +247,21 @@ def train_VIB(args, model, device, train_loader, optimizer, epoch):
         optimizer.step()
     return loss
 
+def train_VDDIB_SR(args, model, device, train_loader, optimizer, epoch):
+
+    model.IB_extractor_requires_grad(requires_grad = False)
+    model.train()
+
+    for batch_idx, (data, target) in enumerate(train_loader):
+        data, target = data.to(device), target.to(device)
+        optimizer.zero_grad()
+        T2_output, T1_output, view1_output, view2_output, _ = model(data, args)
+        loss = F.nll_loss(T2_output, target) + F.nll_loss(T1_output, target) \
+        + args.beta * (((F.nll_loss(view1_output, target) + F.nll_loss(view2_output, target))))
+        loss.backward()
+        optimizer.step()
+    return loss
+
 def fine_tune(args, model, device, train_loader, optimizer, epoch):
 
     model.IB_extractor_requires_grad(requires_grad = True)
@@ -273,7 +272,7 @@ def fine_tune(args, model, device, train_loader, optimizer, epoch):
         optimizer.zero_grad()
         T2_output, T1_output, view1_output, view2_output, KL_loss = model(data, args)
         loss = F.nll_loss(T2_output, target) + F.nll_loss(T1_output, target) \
-        + args.beta * (((F.nll_loss(view1_output, target) + F.nll_loss(view2_output, target)))) #+ 1e-4 * KL_loss
+        + args.beta * (((F.nll_loss(view1_output, target) + F.nll_loss(view2_output, target)))) + 1e-4 * KL_loss
         loss.backward()
         optimizer.step() 
 
@@ -405,7 +404,7 @@ def main():
 
     # inference
     model.load_state_dict(best_model)
-    threshold_list = [0.8,0.825,0.85,0.875,0.9,0.925,0.95]
+    threshold_list = [0.8,0.825,0.85,0.875,0.9,0.925,0.95,0.975]
 
     print("\nInference: \n")
     for i in range(len(threshold_list)):
