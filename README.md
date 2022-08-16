@@ -25,7 +25,7 @@ MNIST
 
 ## How to run
 ### Train the VDDIB-SR method on the MNIST dataset
-`python main_VDDIB-SR_MNIST.py --dim1 2  --dim2 3 --bit 1 --epochs 30 `
+`python main_VDDIB-SR_MNIST.py --dim1 2  --dim2 4 --bit 1 --epochs 30 `
 
 
 The parameters `--dim1`, `--dim2`, and `--bits` correspond to the communication overhead in the transmission.
