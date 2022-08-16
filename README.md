@@ -29,7 +29,7 @@ MNIST
 
 
 The parameters `--dim1`, `--dim2`, and `--bits` correspond to the communication overhead in the transmission.
-The cost of each device in the first round transmission and second round transmission are `dim1 * bit` bits and `dim2 * bit` bits, respectively.
+The costs of each device in the first round transmission and second round transmission are `dim1 * bit` bits and `dim2 * bit` bits, respectively.
 
 
 
