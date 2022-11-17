@@ -1,6 +1,6 @@
 # VDDIB-SR
 
-This repositort contains the codes to reproduce the main experimental results in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication. The content continues updating.
+This repository contains the codes to reproduce the main experimental results in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication. The content continues updating.
 
 
 
