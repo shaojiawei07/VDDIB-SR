@@ -1,6 +1,8 @@
 # VDDIB-SR
 
-This repository aims at introducing the VDDIB-SR method, which can effectively reduce the communication overhead in multi-device edge inference. This method is proposed in our [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication. We release the code to reproduce the main experimental results. Particularly, we focus on the multi-view image classification task on the MNIST dataset and the multi-view object recognition task on the ModelNet40 dataset. The codes for these two tasks are in the folder `./Multi-view_Image_Classification` and folder `./Multi-view_Object_Recognition`, respectively.
+This repository aims at introducing the VDDIB-SR method, which can effectively reduce the communication overhead in multi-device edge inference. This method is proposed in our [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication. 
+
+We release the code to reproduce some experimental results. Particularly, we focus on the multi-view image classification task on the MNIST dataset and the multi-view object recognition task on the ModelNet40 dataset. The codes for these two tasks are in the folder `./Multi-view_Image_Classification` and folder `./Multi-view_Object_Recognition`, respectively.
 
 
 
