@@ -1,14 +1,9 @@
 # VDDIB-SR
 
-This repository contains the codes to reproduce the main experimental results in the [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication. The content continues updating.
+This repository aims at introducing the VDDIB-SR method, which can effectively reduce the communication overhead in multi-device edge inference. This method is proposed in our [paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9837474) "Task-Oriented Communication for Multi-Device Cooperative Edge Inference", which is accepted to IEEE Transaction on Wireless Communication. We release the code to reproduce the main experimental results. Particularly, we focus on the multi-view image classification task on the MNIST dataset and the multi-view object recognition task on the ModelNet40 dataset. The codes for these two tasks are in folder `Multi-view_Image_Classification` and folder `Multi-view_Object_Recognition`, respectively.
 
 
 
-## Logs
-
-**[Aug-16-2022]** I have released the code for the MNIST dataset. 
-
-**[Jul-23-2022]** Our paper has been accepted, and I plan to release the codes before Aug-16-2022.
 
 
 ## Dependencies
@@ -16,22 +11,14 @@ This repository contains the codes to reproduce the main experimental results in
 ```
 Pytorch 1.11.0
 Torchvision 0.12.0
+scikit-image 0.19.3
 ```
 ### Datasets
+
 ```
 MNIST
+ModelNet40
 ```
-
-
-## How to run
-### Train the VDDIB-SR method on the MNIST dataset
-`python main_VDDIB-SR_MNIST.py --dim1 2  --dim2 4 --bit 1 --epochs 30 `
-
-
-The parameters `--dim1`, `--dim2`, and `--bits` correspond to the communication overhead in the transmission.
-The costs of each device in the first round transmission and second round transmission are `dim1 * bit` bits and `dim2 * bit` bits, respectively.
-
-
 
 
 ## Citation
@@ -44,7 +31,3 @@ The costs of each device in the first round transmission and second round transm
   year={2022},
   doi={10.1109/TWC.2022.3191118}}
 ```
-
-## Others
-
-The `attention module` has not been applied for the two-view MNIST dataset since the performance gain is marginal when the number of views is small.
