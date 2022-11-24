@@ -22,6 +22,8 @@
 * Test the performance of the model by calling `inference.py`.
 
 ## How to run
+### An example
+
 ### Step 1
 
 Using the command `python phase1_train_SVCNN_IB.py ` to train an `SVCNN_IB` model.
