@@ -1,4 +1,4 @@
-# VDDIB-SR for multi-view shape recognition task
+# VDDIB-SR for multi-view shape recognition
 
 ## Preliminary
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-* Consider there are twelve devices and one server in an edge inference system. Each device perceive a view of CAD models.
+* Consider there are twelve devices and one server in an edge inference system. Each device perceives a view of CAD models.
 
 * For simplicity, the parameter $T$ (i.e., the maximum number of transmission attempts) of VDDIB-SR is set to 2, which means that there are two communication rounds in edge inference.
 
@@ -24,7 +24,7 @@
 ## How to run
 ### Step 1
 
-Using the command `python phase1_train_SVCNN_IB.py ` to train a `SVCNN_IB` model.
+Using the command `python phase1_train_SVCNN_IB.py ` to train an `SVCNN_IB` model.
 
 ### Step 2
 
@@ -34,10 +34,10 @@ The parameter `-SVCNN_model_path` is used to load the `SVCNN_IB` model trained i
 
 ### Step 3
 
-After Step 2, we test the `MVCNN_DIB` model by runing `python3 test_MVCNN.py -MVCNN_model_path ./PATH/TO/THE/MVCNN_DIB/MODEL -hid_dim1 8 -hid_dim2 12 -bits 1`.
+After Step 2, we test the `MVCNN_DIB` model by running `python3 test_MVCNN.py -MVCNN_model_path ./PATH/TO/THE/MVCNN_DIB/MODEL -hid_dim1 8 -hid_dim2 12 -bits 1`.
 
 
 
 ## Others
 
-* GPU and cuda are required to run this code. The GPU memory consumption is around 18.5 GB.
+* GPU and Cuda are required to run this code. The GPU memory consumption is around 18.5 GB.
