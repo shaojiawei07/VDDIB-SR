@@ -19,7 +19,7 @@
 
 * Run `phase2_train_MVCNN_DIB.py` to train the distributed feature coding scheme to reduce the communication overhead based on the distributed information bottleneck (DIB) framework.
 
-* Test the performance of the model by calling `inference.py`. Note that the parameter `threshold` determines *if the current received features are sufficient for the inference*. Increasing the `threshold` value encourages devices to transmit more features to the server to improve the inference performance. But this leads to high communication overhead. We provide a `threshold_list` to show the communication-performance tradeoff.
+* Test the performance of the model by calling `inference.py`. Note that the parameter `threshold` in `inference.py` determines *if the current received features are sufficient for the inference*. Increasing the `threshold` value encourages devices to transmit more features to the server to improve the inference performance. But this leads to high communication overhead. We provide a `threshold_list` to show the communication-performance tradeoff.
 
 ## Run an example
 
