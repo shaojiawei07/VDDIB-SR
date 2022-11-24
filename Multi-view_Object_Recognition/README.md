@@ -30,7 +30,7 @@ Using the command `python phase1_train_SVCNN_IB.py ` to train an `SVCNN_IB` mode
 
 With the well-trained `SVCNN_IB` model, the next step is to train an `MVCNN_DIB` model by `python phase2_train_MVCNN_DIB.py -SVCNN_model_path ./PATH/TO/THE/SVCNN_IB/MODEL -hid_dim1 8 -hid_dim2 12 -bits 1`.
 
-The parameter `-SVCNN_model_path` is used to load the `SVCNN_IB` model trained in Step 1. The parameters `-hid_dim1 `, `-hid_dim2 `, and `--bits` correspond to the communication overhead in edge inference. The costs of each device in the first round transmission and second round transmission are `hid_dim1 * bits` bits and `hid_dim2 * bits` bits, respectively.
+The parameter `-SVCNN_model_path` is used to load the `SVCNN_IB` model trained in Step 1. The parameters `-hid_dim1 `, `-hid_dim2 `, and `-bits` correspond to the communication overhead in edge inference. The costs of each device in the first round transmission and second round transmission are `hid_dim1 * bits` bits and `hid_dim2 * bits` bits, respectively.
 
 ### Step 3
 
