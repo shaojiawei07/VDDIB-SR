@@ -21,8 +21,7 @@
 
 * Test the performance of the model by calling `inference.py`.
 
-## How to run
-### An example
+## Run an example
 
 ### Step 1
 
