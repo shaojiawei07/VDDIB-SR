@@ -29,7 +29,11 @@ ModelNet40
 @ARTICLE{9837474,
   author={Shao, Jiawei and Mao, Yuyi and Zhang, Jun},
   journal={IEEE Transactions on Wireless Communications}, 
-  title={Task-Oriented Communication for Multi-Device Cooperative Edge Inference}, 
-  year={2022},
+  title={Task-Oriented Communication for Multidevice Cooperative Edge Inference}, 
+  year={2023},
+  volume={22},
+  number={1},
+  pages={73-87},
   doi={10.1109/TWC.2022.3191118}}
+
 ```
