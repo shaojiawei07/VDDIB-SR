@@ -37,3 +37,7 @@ ModelNet40
   doi={10.1109/TWC.2022.3191118}}
 
 ```
+
+## Others
+
+* (2023-Sep-12) I have corrected some typos and updated the paper on [arxiv](https://arxiv.org/abs/2109.00172).
